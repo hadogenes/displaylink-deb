@@ -1,23 +1,21 @@
-DisplayLink RPM
+DisplayLink DEB
 ===============
-[![Build Status](https://travis-ci.org/displaylink-rpm/displaylink-rpm.svg?branch=master)](https://travis-ci.org/displaylink-rpm/displaylink-rpm)
+[![Build Status](https://travis-ci.org/hadogenes/displaylink-deb.svg?branch=master)](https://travis-ci.org/hadogenes/displaylink-deb)
 
 This is the recipe for building the [DisplayLink driver][displaylink]
-in a RPM package for Fedora and CentOS. This driver supports the following
+in a DEB package for Debian. This driver supports the following
 device families:
  - DL-6xxx
  - DL-5xxx
  - DL-41xx
  - DL-3xxx
 
-The package includes the Open Source [evdi][evdi] library.
-
 Packages get automatically built by Travis CI and get uploaded to
 [GitHub releases][releases].
 
 [displaylink]: http://www.displaylink.com/
 [evdi]: https://github.com/DisplayLink/evdi
-[releases]: https://github.com/displaylink-rpm/displaylink-rpm/releases
+[releases]: https://github.com/hadogenes/displaylink-deb/releases
 
 Usage
 =====
