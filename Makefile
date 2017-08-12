@@ -1,32 +1,26 @@
-VERSION=1.4.1
-DAEMON_VERSION=1.3.54
+VERSION=$(shell dpkg-parsechangelog | sed -nr '/^Version:/s/Version: (.*)-(.*)/\1/p')
+RELEASE=$(shell dpkg-parsechangelog | sed -nr '/^Version:/s/Version: (.*)-(.*)/\2/p')
 DOWNLOAD_ID=993 # This id number comes off the link on the displaylink website
-RELEASE=4
 
-.PHONY: srpm rpm
-
-TARGETS = i386/displaylink-$(VERSION)-$(RELEASE).i386.rpm x86_64/displaylink-$(VERSION)-$(RELEASE).x86_64.rpm displaylink-$(VERSION)-$(RELEASE).src.rpm
+TARGETS = displaylink_$(VERSION)-$(RELEASE)_amd64.deb
 
 all: $(TARGETS)
 
 clean:
 	rm -f $(TARGETS) v$(VERSION).tar.gz
 
-DisplayLink\ USB\ Graphics\ Software\ for\ Ubuntu\ $(DAEMON_VERSION).zip:
-	wget --post-data="fileId=$(DOWNLOAD_ID)&accept_submit=Accept" -O DisplayLink\ USB\ Graphics\ Software\ for\ Ubuntu\ $(DAEMON_VERSION).zip http://www.displaylink.com/downloads/file?id=$(DOWNLOAD_ID)
+DisplayLink\ USB\ Graphics\ Software\ for\ Ubuntu\ $(VERSION).zip:
+	wget --post-data="fileId=$(DOWNLOAD_ID)&accept_submit=Accept" -O DisplayLink\ USB\ Graphics\ Software\ for\ Ubuntu\ $(VERSION).zip http://www.displaylink.com/downloads/file?id=$(DOWNLOAD_ID)
 
-v$(VERSION).tar.gz:
-	wget -O v$(VERSION).tar.gz https://github.com/DisplayLink/evdi/archive/v$(VERSION).tar.gz
+displaylink_$(VERSION).orig.tar.gz: DisplayLink\ USB\ Graphics\ Software\ for\ Ubuntu\ $(VERSION).zip
+	unzip DisplayLink\ USB\ Graphics\ Software\ for\ Ubuntu\ $(VERSION).zip
+	chmod +x displaylink-driver-$(VERSION).run
+	./displaylink-driver-$(VERSION).run --keep --noexec
+	mv displaylink-driver-$(VERSION) displaylink-$(VERSION)
+	tar -czf displaylink_$(VERSION).orig.tar.gz displaylink-$(VERSION)
 
-rpm: i386/displaylink-$(VERSION)-$(RELEASE).i386.rpm x86_64/displaylink-$(VERSION)-$(RELEASE).x86_64.rpm
-
-i386/displaylink-$(VERSION)-$(RELEASE).i386.rpm: DisplayLink\ USB\ Graphics\ Software\ for\ Ubuntu\ $(DAEMON_VERSION).zip v$(VERSION).tar.gz displaylink.spec
-	rpmbuild -bb --define "_topdir `pwd`" --define "_sourcedir `pwd`" --define "_rpmdir `pwd`" --define "_specdir `pwd`" --define "_srcrpmdir `pwd`" --define "_buildrootdir `mktemp -d /var/tmp/displayportXXXXXX`" --define "_builddir `mktemp -d /var/tmp/displayportXXXXXX`" --define "_release $(RELEASE)" --define "_daemon_version $(DAEMON_VERSION)" --define "_version $(VERSION)" --define "_tmppath `mktemp -d /var/tmp/displayportXXXXXX`" displaylink.spec --target=i386
-
-x86_64/displaylink-$(VERSION)-$(RELEASE).x86_64.rpm: DisplayLink\ USB\ Graphics\ Software\ for\ Ubuntu\ $(DAEMON_VERSION).zip v$(VERSION).tar.gz displaylink.spec
-	rpmbuild -bb --define "_topdir `pwd`" --define "_sourcedir `pwd`" --define "_rpmdir `pwd`" --define "_specdir `pwd`" --define "_srcrpmdir `pwd`" --define "_buildrootdir `mktemp -d /var/tmp/displayportXXXXXX`" --define "_builddir `mktemp -d /var/tmp/displayportXXXXXX`" --define "_release $(RELEASE)" --define "_daemon_version $(DAEMON_VERSION)" --define "_version $(VERSION)" --define "_tmppath `mktemp -d /var/tmp/displayportXXXXXX`" displaylink.spec --target=x86_64
-
-SRPM: displaylink-$(VERSION)-$(RELEASE).src.rpm
-
-displaylink-$(VERSION)-$(RELEASE).src.rpm: DisplayLink\ USB\ Graphics\ Software\ for\ Ubuntu\ $(DAEMON_VERSION).zip v$(VERSION).tar.gz displaylink.spec
-	rpmbuild -bs --define "_topdir `pwd`" --define "_sourcedir `pwd`" --define "_rpmdir `pwd`" --define "_specdir `pwd`" --define "_srcrpmdir `pwd`" --define "_buildrootdir `mktemp -d /var/tmp/displayportXXXXXX`" --define "_builddir `mktemp -d /var/tmp/displayportXXXXXX`" --define "_release $(RELEASE)" --define "_daemon_version $(DAEMON_VERSION)" --define "_version $(VERSION)" --define "_tmppath `mktemp -d /var/tmp/displayportXXXXXX`" displaylink.spec
+displaylink_$(VERSION)-$(RELEASE)_amd64.deb: displaylink_$(VERSION).orig.tar.gz
+	test -d displaylink-$(VERSION) || tar -xzf displaylink_$(VERSION).orig.tar.gz
+	cd displaylink-$(VERSION) && \
+		cp -r ../debian . && \
+		debuild -us -uc
