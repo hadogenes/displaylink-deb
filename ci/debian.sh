@@ -1,4 +1,4 @@
-#!/bin/basa -e
+#!/bin/bash -e
 
 apt update
 apt install -y build-essential devscripts debhelper wget
