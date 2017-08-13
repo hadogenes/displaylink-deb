@@ -23,8 +23,7 @@ override_dh_auto_install:
 	install -D -m 755 displaylink-sleep "$(DESTDIR)/lib/systemd/system-sleep/displaylink" 
 
 override_dh_systemd_start:
-	# Start only when device is connected
-	grep 17e9 /sys/bus/usb/devices/*/idVendor && dh_systemd_start --restart-after-upgrade
+	dh_systemd_start --no-start
 
 override_dh_systemd_enable:
 	dh_systemd_enable --no-enable
