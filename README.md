@@ -20,6 +20,8 @@ Packages get automatically built by Travis CI and get uploaded to
 Usage
 =====
 
+This package requires evdi lib, which is packaged [evdi-deb](https://github.com/hadogenes/evdi-deb) repository
+
 In order to compile the driver, just use make. The Makefile should
 download the file for you.
 
@@ -42,33 +44,4 @@ the specfile for the same upstream version.
 New Upstream release
 --------------------
 
-From time to time, DisplayLink will update their driver. We try to do
-so, but for that we usually rely on pull requests.
-
-We manage three different upstream numbers for versioning:
-
-1. evdi kernel driver version
-2. DisplayLinkManager daemon and libraries version
-3. Download ID number from DisplayLink (for automatic zip retrieval)
-
-These variables need to be changed in the following places:
-
-- Makefile
-  - `DAEMON_VERSION` is the DisplayLinkManager version
-  - `VERSION` is currently the evdi driver version
-  - `DOWNLOAD_ID` is the `?download_id=` query parameter in
-    DisplayLink website to download the zip
-- .travis.yml
-  - `VERSION` is the same as in the Makefile
-  - `DAEMON_VERSION` is the same version as in Makefile
-
-Also, please update the changelog at the bottom of the
-displaylink.spec file.
-
-
-Packaging change
-----------------
-
-When changing a packaging rule, please increment the `RELEASE`
-variable by one in both displaylink.spec and .travis.yml (so that
-Travis can release the new artifact automatically).
+Add info to debian/changelog and commit
