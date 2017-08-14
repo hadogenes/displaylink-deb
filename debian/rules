@@ -4,6 +4,7 @@
 
 VERSION	:= $(shell dpkg-parsechangelog | sed -nr '/^Version:/s/Version: (.*:)?(.*)-(.*)/\2/p')
 DESTDIR	= $(CURDIR)/debian/displaylink
+EXEPATH=x64-ubuntu-1604/DisplayLinkManager
 
 %:
 	dh $@ --with systemd
@@ -13,12 +14,13 @@ override_dh_auto_clean:
 
 override_dh_auto_build:
 	bash debian/displaylink-sleep-extractor.sh displaylink-installer.sh > displaylink-sleep
+	patchelf --remove-rpath $(EXEPATH)
 
 override_dh_auto_install:
 	# firmware
 	install -D -m 644 -t "$(DESTDIR)/usr/share/displaylink" *.spkg
 	# Binary
-	install -D -m 755 -t "$(DESTDIR)/usr/sbin" x64-ubuntu-1604/DisplayLinkManager
+	install -D -m 755 $(EXEPATH) "$(DESTDIR)/usr/sbin/DisplayLinkManager"
 	# Sleep/resume script
 	install -D -m 755 displaylink-sleep "$(DESTDIR)/lib/systemd/system-sleep/displaylink" 
 
@@ -28,6 +30,7 @@ override_dh_systemd_start:
 override_dh_systemd_enable:
 	dh_systemd_enable --no-enable
 
+override_dh_bug:
 # do nothing
 override_dh_auto_configure:
 override_dh_auto_test:
