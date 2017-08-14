@@ -6,7 +6,7 @@ Maintainer: Jacek Szafarkiewicz <szafar@linux.pl>
 Package: displaylink
 Architecture: i386 amd64
 Section: non-free/x11
-Depends:
+Depends: ${shlibs:Depends},
  evdi (>= 1.4.1),
  evdi-dkms (>= 1.4.1),
  udev,
