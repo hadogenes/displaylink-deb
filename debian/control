@@ -2,6 +2,8 @@ Source: displaylink
 Section: non-free/x11
 Priority: optional
 Maintainer: Jacek Szafarkiewicz <szafar@linux.pl>
+Build-Depends: debhelper (>= 9.20160709~) || dh-systemd, patchelf
+Standards-Version: 3.9.8
 
 Package: displaylink
 Architecture: i386 amd64
@@ -10,7 +12,8 @@ Depends: ${shlibs:Depends},
  evdi (>= 1.4.1),
  evdi-dkms (>= 1.4.1),
  udev,
- libusb-1.0-0
+ libusb-1.0-0,
+ libuuid1
 Description: DisplayLink VGA/HDMI driver for DL-6xxx, DL-5xxx, DL-41xx and DL-3xxx adapters
  This adds support for HDMI/VGA adapters built upon the DisplayLink DL-6xxx,
  DL-5xxx, DL-41xx and DL-3xxx series of chipsets. This includes numerous
