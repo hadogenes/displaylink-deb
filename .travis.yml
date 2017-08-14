@@ -1,9 +1,6 @@
 language: generic
 sudo: required
 env:
-    global:
-        - VERSION=1.3.54
-        - RELEASE=4
     matrix:
         - OS_TYPE=debian OS_ARCH=amd64 OS_VERSION=stretch
         #- OS_TYPE=debian OS_ARCH=i386 OS_VERSION=stretch
@@ -28,7 +25,7 @@ deploy:
     skip_cleanup: true
     on:
       tags: true
-#    api_key:
-#        secure: faqfSs9slgmmDOquGF4qBu74gzClZ6Mr6aTn0wb8IWLQdfLXZ8kNufQU5qgMI+xOZBBAq9TAVAfpJ75MGoBkJC9xUFoA4E+i935ir/TPjy74KPoriHfg2rtKJW0P+Ma9BbG3NHs60/dIZKwMoXPR8YcTYQ6vNwckAxoHeXNfNmhoYNrLHgXEhKmPxWNFO/x4gLtA/w5bL1TR5TTHnFA7bmmHxXpIw0RH8zISYysWStOthZSyf7BBnyArM46kX1ez5gJQ/2RHHOiYp+KhzzLCDVIMDdXcCf18kxuSNiqbAkguSmhoQA53OUAuvcsBxwhm/zEBuhuhuZBGgZkArjuWIOh36bdCX1XfJLwOKiqvU3Gz99SDAHxc9VDZmTLXyUOIxu7BI8+1VSPUZT/0n9G7LUJzE3LgnuNtCcXP0LWQbt3cLyrKYVWZPtdGwQ+Q6EHM61MM5aGZBl+olHuCRMvkRWJYks88G+zWKSbwvRCwOolJNoKLvdeU2gqhia6Hfp0UHTZnvJRmvhrjNxrD5jXnL05fcr5h2g9C0uVCQAJNpC9qHRFk/WskGVrwRhlpSHME8ugawNsr5+/qzY4SZncbNoqn/iOTQE0wxNtdNNIYjofrPKsRMGErkOZzWFTzlF/2bdb2gOo2jU4QUCJwshOAv0gKJ3r1WJDaodKYXqasASA=
+    api_key:
+        secure: i9uLeiM+e9I8ZKbxvJ8Ih8NicaDGnbZbDFV/mdC5yrBSE9efNdH6wPx1S9gd8ejcTq+F65mExZF5Wa25l0jo+sBdGNR2vKiqLs89Tm/CHQ47ZkUQwMWDbLZvGoBuAX8fcEa7EqE6Tp5T5b93rwSxTls+xfQ6VCZ289V+Zww9jnMECiX9FBLVMYySfQZ31ZLn1UuAV7FyfDQfu1x4C60rUT2hyfR7Q9JGlVfsCNDb8IJ5RDuG25D7hxQrwSMFyxsYIL2vJG5fXFmIAofrn8Uyzzdcg9CNjYRfzPRamO8Fze9rXyR0f8xhyoBrXu+HtJ7m4YhgXuDIhLzeLfLeYzi9uMuDpioyHOGed3uewPq6fNYOwquFo+JXPTFyu8CsdKvGOhb5HEJlYvooRxKeOKfpFjuqF2bOARBkAsP13mSik2Er1VXoDYLjYi1UGSaW5aLm9EXeU992DxBVCDiH/BuEW1V8IRD7J9DJdD9DaAXPFpFFrlTemR5SOHbNV8Qt64RIBj2CmZ5sJRaIMBTdyx0d1L0/gFnkMxLVZnPZzXBPUDEQ33bKZlqCCuU0XLCsmOytYExcAaQceVIF15NO47HwK9HhKnAYKSY0UCFqdxQfZ+AGTwhz8rssX5CsadTbQFSZ7JhotAtZpkZFzgencrUBKcvgrioUz8xcDcJTBgH/G7Q=
     file_glob: true
     file: deb/*
