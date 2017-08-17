@@ -2,6 +2,6 @@
 
 #DEBHELPER#
 
-if grep -q 17e9 /sys/bus/usb/devices/*/idVendor; then 
+if grep -q DisplayLink /sys/bus/usb/devices/*/manufacturer; then 
     systemctl restart displaylink
 fi
