@@ -1,8 +1,8 @@
-displaylink (1.3.54-2) UNRELEASED; urgency=medium
+displaylink (1.3.54-2) unstable; urgency=medium
 
   * Change workdir to /var/lib/displaylink
 
- -- Jacek Szafarkiewicz <szafar@linux.pl>  Thu, 17 Aug 2017 14:52:59 +0200
+ -- Jacek Szafarkiewicz <szafar@linux.pl>  Thu, 17 Aug 2017 15:03:15 +0200
 
 displaylink (1.3.54-1) unstable; urgency=medium
 
