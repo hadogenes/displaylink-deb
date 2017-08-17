@@ -9,7 +9,7 @@ Standards-Version: 3.9.8
 Package: displaylink
 Architecture: i386 amd64
 Section: non-free/x11
-Depends: ${shlibs:Depends},
+Depends: ${shlibs:Depends}, ${misc:Depends},
  evdi (>= 1.4.1),
  evdi-dkms (>= 1.4.1),
  udev,
