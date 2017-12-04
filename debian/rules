@@ -16,9 +16,9 @@ override_dh_auto_build:
 
 override_dh_auto_install:
 	# firmware
-	install -D -m 644 -t "$(DESTDIR)/var/lib/displaylink" *.spkg
+	install -D -m 644 -t "$(DESTDIR)/opt/displaylink" *.spkg
 	# Binary
-	install -D -m 755 x64-ubuntu-1604/DisplayLinkManager "$(DESTDIR)/usr/sbin/DisplayLinkManager"
+	install -D -m 755 x64-ubuntu-1604/DisplayLinkManager "$(DESTDIR)/opt/displaylink/DisplayLinkManager"
 	# Sleep/resume script
 	install -D -m 755 displaylink-sleep "$(DESTDIR)/lib/systemd/system-sleep/displaylink" 
 
@@ -29,7 +29,7 @@ override_dh_systemd_enable:
 	dh_systemd_enable --no-enable
 
 override_dh_strip:
-	patchelf --remove-rpath "$(DESTDIR)/usr/sbin/DisplayLinkManager"
+	patchelf --remove-rpath "$(DESTDIR)/opt/displaylink/DisplayLinkManager"
 	dh_strip
 
 # do nothing
