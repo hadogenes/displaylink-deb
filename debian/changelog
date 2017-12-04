@@ -1,8 +1,8 @@
-displaylink (1.4.210-2) UNRELEASED; urgency=medium
+displaylink (1.4.210-2) unstable; urgency=medium
 
   * Correct path in service 
 
- -- Jacek Szafarkiewicz <hadogenes@prope>  Mon, 04 Dec 2017 22:53:02 +0100
+ -- Jacek Szafarkiewicz <hadogenes@prope>  Mon, 04 Dec 2017 22:55:11 +0100
 
 displaylink (1.4.210-1) unstable; urgency=medium
 
