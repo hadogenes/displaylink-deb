@@ -1,8 +1,14 @@
-displaylink (4.1.9-1) UNRELEASED; urgency=medium
+displaylink (4.2.29-1) UNRELEASED; urgency=medium
 
   * New upstream version 
 
- -- Jacek Szafarkiewicz <szafar@linux.pl>  Thu, 01 Feb 2018 16:03:08 +0100
+ -- Jacek Szafarkiewicz <zafar@linux.pl>  Mon, 07 May 2018 22:13:50 +0200
+
+displaylink (4.1.9-1) unstable; urgency=medium
+
+  * New upstream version 
+
+ -- Jacek Szafarkiewicz <szafar@linux.pl>  Mon, 07 May 2018 22:11:44 +0200
 
 displaylink (1.4.210-1) unstable; urgency=medium
 
