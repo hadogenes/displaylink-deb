@@ -1,8 +1,8 @@
-displaylink (4.2.29-2) UNRELEASED; urgency=medium
+displaylink (4.2.29-2) unstable; urgency=medium
 
   * Update systemd service
 
- -- Jacek Szafarkiewicz <szafar@linux.pl>  Tue, 08 May 2018 22:02:34 +0200
+ -- Jacek Szafarkiewicz <szafar@linux.pl>  Tue, 08 May 2018 22:07:49 +0200
 
 displaylink (4.2.29-1) unstable; urgency=medium
 
