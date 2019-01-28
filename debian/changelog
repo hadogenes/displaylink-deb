@@ -1,3 +1,9 @@
+displaylink (4.4.24-1) UNRELEASED; urgency=medium
+
+  *  New upstream version
+
+ -- Jacek Szafarkiewicz <szafar@linux.pl>  Mon, 28 Jan 2019 10:23:33 +0100
+
 displaylink (4.2.29-2) unstable; urgency=medium
 
   * Update systemd service
