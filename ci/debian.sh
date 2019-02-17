@@ -12,3 +12,10 @@ yes | mk-build-deps -i || true
 rm -f displaylink-build-deps_*.deb
 
 make
+
+mkdir deb
+
+for deb in *.deb; do
+    filename=$(basename "$deb" .deb)
+    mv "$deb" "deb/${filename}-${OS_VERSION}.deb"
+done

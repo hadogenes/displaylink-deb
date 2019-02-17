@@ -4,7 +4,7 @@ env:
     matrix:
         - OS_TYPE=debian OS_ARCH=amd64 OS_VERSION=stretch
         #- OS_TYPE=debian OS_ARCH=i386 OS_VERSION=stretch
-        #- OS_TYPE=debian OS_ARCH=amd64 OS_VERSION=jessie
+        - OS_TYPE=debian OS_ARCH=amd64 OS_VERSION=buster
         #- OS_TYPE=debian OS_ARCH=i386 OS_VERSION=jessie
 services:
     - docker
@@ -17,9 +17,7 @@ before_install:
 script:
     - sudo docker run --rm=true -v `pwd`:/base-src:rw -t ${OS_TYPE}:${OS_VERSION} /bin/bash
         -c /base-src/ci/${OS_TYPE}.sh
-    - sudo chown `id -u`:`id -g` -R .
-    - mkdir deb
-    - mv *.deb deb/
+    - sudo chown `id -u`:`id -g` -R deb
 deploy:
     provider: releases
     skip_cleanup: true
