@@ -20,8 +20,6 @@ Packages get automatically built by Travis CI and get uploaded to
 Usage
 =====
 
-This package requires evdi lib, which is packaged [evdi-deb](https://github.com/hadogenes/evdi-deb) repository
-
 In order to compile the driver, just use make. The Makefile should
 download the file for you.
 
