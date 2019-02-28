@@ -1,9 +1,9 @@
-displaylink (4.4.24-3) UNRELEASED; urgency=medium
+displaylink (4.4.24-3) unstable; urgency=medium
 
   * Add xorg files 
   * Add apparmor 
 
- -- Jacek Szafarkiewicz <szafar@linux.pl>  Thu, 28 Feb 2019 15:03:47 +0100
+ -- Jacek Szafarkiewicz <szafar@linux.pl>  Thu, 28 Feb 2019 17:13:56 +0100
 
 displaylink (4.4.24-2) unstable; urgency=medium
 
