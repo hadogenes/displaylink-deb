@@ -21,6 +21,8 @@ override_dh_auto_install:
 	install -D -m 755 x64-ubuntu-1604/DisplayLinkManager "$(DESTDIR)/opt/displaylink/DisplayLinkManager"
 	# Sleep/resume script
 	install -D -m 755 displaylink-sleep "$(DESTDIR)/lib/systemd/system-sleep/displaylink" 
+	# Xorg config file
+	install -D -m 644 20-displaylink.conf "$(DESTDIR)/usr/share/X11/xorg.conf.d/20-displaylink.conf" 
 
 override_dh_systemd_start:
 	dh_systemd_start --no-start
