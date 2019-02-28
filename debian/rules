@@ -30,6 +30,9 @@ override_dh_auto_install:
 	install -D -m 755 displaylink-sleep "$(DESTDIR)/lib/systemd/system-sleep/displaylink" 
 	# Xorg config file
 	install -D -m 644 debian/20-displaylink.conf "$(DESTDIR)/usr/share/X11/xorg.conf.d/20-displaylink.conf" 
+	# Apparmor
+	install -D -m 644 debian/opt.displaylink.DisplayLinkManager $(DESTDIR)/etc/apparmor.d/opt.displaylink.DisplayLinkManager
+	dh_apparmor --profile-name=opt.displaylink.DisplayLinkManager -pdisplaylink
 
 override_dh_systemd_start:
 	dh_systemd_start --no-start

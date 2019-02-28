@@ -1,0 +1,42 @@
+# Last Modified: Tue May  8 22:51:33 2018
+#include <tunables/global>
+
+/opt/displaylink/DisplayLinkManager {
+  #include <abstractions/base>
+
+  capability dac_override,
+  capability dac_read_search,
+  capability net_admin,
+  capability sys_admin,
+  capability sys_module,
+  capability sys_nice,
+  capability sys_ptrace,
+  capability wake_alarm,
+
+  /dev/bus/usb/ r,
+  /dev/bus/usb/** rw,
+  /dev/dri/card* rw,
+  /dev/shm/DisplayLink* rw,
+  /etc/udev/udev.conf r,
+  /opt/displaylink*.edid w,
+  /opt/displaylink/ rw,
+  /opt/displaylink/** rwk,
+  /proc/ r,
+  /proc/@{pid}/fd/ r,
+  /run/udev/data/+usb:* r,
+  /run/udev/data/c* r,
+  /sys/bus/ r,
+  /sys/bus/usb/devices/ r,
+  /sys/class/ r,
+  /sys/devices/** r,
+  /sys/devices/**/usb*/**/busnum r,
+  /sys/devices/**/usb*/**/descriptors r,
+  /sys/devices/**/usb*/**/devnum r,
+  /sys/devices/**/usb*/**/uevent r,
+  /sys/devices/evdi rw,
+  /sys/devices/evdi/** rw,
+  /tmp/.dl.log rw,
+  /tmp/PmMessagesPort_in rw,
+  /tmp/PmMessagesPort_out rw,
+
+}
