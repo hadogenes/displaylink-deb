@@ -15,7 +15,7 @@ make
 
 mkdir deb
 
-DEBIAN_VERSION=$(lsb_release -c)
+DEBIAN_VERSION=$(lsb_release -cs)
 for deb in *.deb; do
     filename=$(basename "$deb" .deb)
     mv "$deb" "deb/${filename}-${DEBIAN_VERSION}.deb"

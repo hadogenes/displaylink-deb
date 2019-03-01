@@ -4,7 +4,7 @@
 
 VERSION	:= $(shell dpkg-parsechangelog | sed -nr '/^Version:/s/Version: (.*:)?(.*)-(.*)/\2/p')
 DESTDIR	= $(CURDIR)/debian/displaylink
-DEBIAN_VERSION := $(shell lsb_release -c)
+DEBIAN_VERSION := $(shell lsb_release -cs)
 ifneq (,$(findstring $(DEB_HOST_ARCH), amd64))
   SOURCE_DL_DIR=x64-ubuntu-1604
 else ifneq (,$(findstring $(DEB_HOST_ARCH), armhf))
