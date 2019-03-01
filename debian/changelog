@@ -1,9 +1,9 @@
-displaylink (4.4.24-5) UNRELEASED; urgency=medium
+displaylink (4.4.24-5) unstable; urgency=medium
 
   * Correct debian versions
   * add lintian-overrides 
 
- -- Jacek Szafarkiewicz <szafar@linux.pl>  Fri, 01 Mar 2019 09:54:14 +0100
+ -- Jacek Szafarkiewicz <szafar@linux.pl>  Fri, 01 Mar 2019 09:57:55 +0100
 
 displaylink (4.4.24-4) unstable; urgency=medium
 
