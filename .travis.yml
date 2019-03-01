@@ -2,10 +2,12 @@ language: generic
 sudo: required
 env:
     matrix:
-        #- OS_TYPE=debian OS_ARCH=amd64 OS_VERSION=stretch
-        #- OS_TYPE=debian OS_ARCH=i386 OS_VERSION=stretch
+        - OS_TYPE=debian OS_ARCH=amd64 OS_VERSION=stretch
+        - OS_TYPE=debian OS_ARCH=i386 OS_VERSION=stretch
+        #- OS_TYPE=debian OS_ARCH=armhf OS_VERSION=stretch
         - OS_TYPE=debian OS_ARCH=amd64 OS_VERSION=buster
-        #- OS_TYPE=debian OS_ARCH=i386 OS_VERSION=jessie
+        - OS_TYPE=debian OS_ARCH=i386 OS_VERSION=buster
+        #- OS_TYPE=debian OS_ARCH=armhf OS_VERSION=buster
 services:
     - docker
 before_install:

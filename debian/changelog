@@ -1,9 +1,15 @@
-displaylink (4.4.24-3) UNRELEASED; urgency=medium
+displaylink (4.4.24-4) UNRELEASED; urgency=medium
+
+  * Build deb for multiple systems 
+
+ -- Jacek Szafarkiewicz <szafar@linux.pl>  Fri, 01 Mar 2019 09:21:41 +0100
+
+displaylink (4.4.24-3) unstable; urgency=medium
 
   * Add xorg files 
   * Add apparmor 
 
- -- Jacek Szafarkiewicz <szafar@linux.pl>  Thu, 28 Feb 2019 15:03:47 +0100
+ -- Jacek Szafarkiewicz <szafar@linux.pl>  Fri, 01 Mar 2019 09:21:32 +0100
 
 displaylink (4.4.24-2) unstable; urgency=medium
 
