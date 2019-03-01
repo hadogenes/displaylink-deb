@@ -1,3 +1,9 @@
+displaylink (4.4.24-6) unstable; urgency=medium
+
+  * Better build for i386
+
+ -- Jacek Szafarkiewicz <szafar@linux.pl>  Fri, 01 Mar 2019 10:20:23 +0100
+
 displaylink (4.4.24-5) unstable; urgency=medium
 
   * Correct debian versions
