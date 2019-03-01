@@ -1,0 +1,6 @@
+displaylink: dir-or-file-in-opt opt/displaylink/
+displaylink: dir-or-file-in-opt opt/displaylink/DisplayLinkManager
+displaylink: dir-or-file-in-opt opt/displaylink/ella-dock-release.spkg
+displaylink: dir-or-file-in-opt opt/displaylink/firefly-monitor-release.spkg
+displaylink: dir-or-file-in-opt opt/displaylink/ridge-dock-release.spkg
+displaylink: init.d-script-not-included-in-package etc/init.d/displaylink
