@@ -1,8 +1,8 @@
-displaylink (4.4.24-4) UNRELEASED; urgency=medium
+displaylink (4.4.24-4) unstable; urgency=medium
 
   * Build deb for multiple systems 
 
- -- Jacek Szafarkiewicz <szafar@linux.pl>  Fri, 01 Mar 2019 09:21:41 +0100
+ -- Jacek Szafarkiewicz <szafar@linux.pl>  Fri, 01 Mar 2019 09:29:05 +0100
 
 displaylink (4.4.24-3) unstable; urgency=medium
 
