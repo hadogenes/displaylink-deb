@@ -1,3 +1,9 @@
+displaylink (4.4.24-6) UNRELEASED; urgency=medium
+
+  * Update apparmor and set to complain
+
+ -- Jacek Szafarkiewicz <szafar@linux.pl>  Sun, 03 Mar 2019 21:16:23 +0100
+
 displaylink (4.4.24-5) unstable; urgency=medium
 
   * Correct debian versions
