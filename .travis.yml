@@ -2,10 +2,12 @@ language: generic
 sudo: required
 env:
     matrix:
-        #- OS_TYPE=debian OS_ARCH=amd64 OS_VERSION=stretch
-        #- OS_TYPE=debian OS_ARCH=i386 OS_VERSION=stretch
+        - OS_TYPE=debian OS_ARCH=amd64 OS_VERSION=stretch
+        - OS_TYPE=debian OS_ARCH=i386 OS_VERSION=stretch
+        #- OS_TYPE=debian OS_ARCH=armhf OS_VERSION=stretch
         - OS_TYPE=debian OS_ARCH=amd64 OS_VERSION=buster
-        #- OS_TYPE=debian OS_ARCH=i386 OS_VERSION=jessie
+        - OS_TYPE=debian OS_ARCH=i386 OS_VERSION=buster
+        #- OS_TYPE=debian OS_ARCH=armhf OS_VERSION=buster
 services:
     - docker
 before_install:
@@ -13,10 +15,10 @@ before_install:
         | sudo tee /etc/default/docker > /dev/null
     - sudo service docker restart
     - sleep 5
-    - sudo docker pull ${OS_TYPE}:${OS_VERSION}
+    - sudo docker pull $OS_ARCH/$OS_TYPE:$OS_VERSION
 script:
-    - sudo docker run --rm=true -v `pwd`:/base-src:rw -t ${OS_TYPE}:${OS_VERSION} /bin/bash
-        -c /base-src/ci/${OS_TYPE}.sh
+    - sudo docker run --rm=true -v `pwd`:/base-src:rw -t $OS_ARCH/$OS_TYPE:$OS_VERSION /bin/bash
+        -c /base-src/ci/$OS_TYPE.sh
     - sudo chown `id -u`:`id -g` -R deb
 deploy:
     provider: releases
