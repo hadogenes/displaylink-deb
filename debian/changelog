@@ -1,8 +1,14 @@
-displaylink (4.4.24-6) UNRELEASED; urgency=medium
+displaylink (4.4.24-7) unstable; urgency=medium
 
   * Update apparmor and set to complain
 
- -- Jacek Szafarkiewicz <szafar@linux.pl>  Sun, 03 Mar 2019 21:16:23 +0100
+ -- Jacek Szafarkiewicz <szafar@linux.pl>  Sun, 03 Mar 2019 21:18:55 +0100
+
+displaylink (4.4.24-6) unstable; urgency=medium
+
+  * Update building for i386
+
+ -- Jacek Szafarkiewicz <szafar@linux.pl>  Sun, 01 Mar 2019 10:25:21 +0100
 
 displaylink (4.4.24-5) unstable; urgency=medium
 
