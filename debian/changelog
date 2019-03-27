@@ -1,3 +1,9 @@
+displaylink (5.1.26-2) unstable; urgency=medium
+
+  * Rebuild 
+
+ -- Jacek Szafarkiewicz <szafar@linux.pl>  Wed, 27 Mar 2019 11:49:51 +0100
+
 displaylink (5.1.26-1) unstable; urgency=medium
 
   * New upstream version 
