@@ -1,7 +1,0 @@
-#/bin/bash
-
-#DEBHELPER#
-
-if grep -q DisplayLink /sys/bus/usb/devices/*/manufacturer; then 
-    systemctl restart displaylink
-fi
