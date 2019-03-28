@@ -1,3 +1,9 @@
+displaylink (5.1.26-3) UNRELEASED; urgency=medium
+
+  * Use original file order 
+
+ -- Jacek Szafarkiewicz <szafar@linux.pl>  Thu, 28 Mar 2019 12:56:11 +0100
+
 displaylink (5.1.26-2) unstable; urgency=medium
 
   * Rebuild 
