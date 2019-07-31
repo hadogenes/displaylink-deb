@@ -2,7 +2,9 @@
 Description=DisplayLink connection user script
 
 [Service]
-ExecStart=/opt/displaylink/displaylink-connect.sh
+Type=oneshot
+RemainAfterExit=yes
+ExecStart=/opt/displaylink/displaylink_connect.sh
 SuccessExitStatus=10
 
 [Install]
