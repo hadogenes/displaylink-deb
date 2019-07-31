@@ -1,9 +1,9 @@
-displaylink (5.1.26-4) UNRELEASED; urgency=medium
+displaylink (5.1.26-4) unstable; urgency=medium
 
   * Add displaylink-connect scripts 
   * Add evdi module load at start with parameters
 
- -- Jacek Szafarkiewicz <szafar@linux.pl>  Wed, 31 Jul 2019 15:35:54 +0200
+ -- Jacek Szafarkiewicz <szafar@linux.pl>  Wed, 31 Jul 2019 23:09:44 +0200
 
 displaylink (5.1.26-3) unstable; urgency=medium
 
