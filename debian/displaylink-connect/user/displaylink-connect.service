@@ -1,0 +1,9 @@
+[Unit]
+Description=DisplayLink connection user script
+
+[Service]
+ExecStart=/opt/displaylink/displaylink-connect.sh
+SuccessExitStatus=10
+
+[Install]
+WantedBy=graphical-session.target
