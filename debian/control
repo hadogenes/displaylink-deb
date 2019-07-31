@@ -15,7 +15,8 @@ Depends: ${shlibs:Depends}, ${misc:Depends},
  evdi-dkms (>= 1.6.0), evdi-dkms (<<1.7.0),
  udev,
  libusb-1.0-0,
- libuuid1
+ libuuid1,
+ dbus-user-session
 Description: DisplayLink VGA/HDMI driver for DL-6xxx, DL-5xxx, DL-41xx and DL-3xxx adapters
  This adds support for HDMI/VGA adapters built upon the DisplayLink DL-6xxx,
  DL-5xxx, DL-41xx and DL-3xxx series of chipsets. This includes numerous
