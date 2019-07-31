@@ -18,4 +18,4 @@ add_systemd_service "$VERSION"
 
 find "$DESTDIR" -name \*.service |\
     xargs \
-        sed -i "s@ExecStartPre=/bin/sh -c 'modprobe evdi || (dkms install evdi/.* && modprobe evdi)'@ExecStartPre=modprobe evdi@"
+        sed -i "@ExecStartPre=/bin/sh -c 'modprobe evdi || (dkms install evdi/.* && modprobe evdi)'@d"
