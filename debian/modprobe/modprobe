@@ -1,2 +1,1 @@
-# Indicate how many DRM devices should be created initially by evdi. This number should generally be equal to the number of screens you are connecting to DisplayLink devices.
-options evdi initial_device_count=2
+evdi
