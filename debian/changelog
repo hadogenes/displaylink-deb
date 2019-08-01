@@ -1,3 +1,11 @@
+displaylink (5.1.26-5) UNRELEASED; urgency=medium
+
+  * Add condition to systemd user service 
+  * Correct files modprobe and modules-load 
+  * main displaylink service don't wait for user services 
+
+ -- Jacek Szafarkiewicz <szafar@linux.pl>  Thu, 01 Aug 2019 14:06:22 +0200
+
 displaylink (5.1.26-4) unstable; urgency=medium
 
   * Add displaylink-connect scripts 
