@@ -40,7 +40,7 @@ override_dh_auto_install:
 	install -D -m 644 debian/opt.displaylink.DisplayLinkManager "$(DESTDIR)/etc/apparmor.d/opt.displaylink.DisplayLinkManager"
 	dh_apparmor --profile-name=opt.displaylink.DisplayLinkManager -pdisplaylink
 	# displaylink-connect
-	install -D -m 644 debian/displaylink-connect/system/displaylink-connect.conf "$(DESTDIR)/usr/lib/systemd/system/displaylink-driver.service.d/displaylink-connect.conf"
+	install -D -m 644 debian/displaylink-connect/system/displaylink-driver.conf "$(DESTDIR)/usr/lib/systemd/system/displaylink-driver.service.d/displaylink-connect.conf"
 	install -D -m 644 debian/displaylink-connect/user/displaylink-connect.service "$(DESTDIR)/usr/lib/systemd/user/displaylink-connect.service"
 	mkdir -p "$(DESTDIR)/usr/lib/systemd/user/graphical-session.target.wants"
 	dh_link usr/lib/systemd/user/displaylink-connect.service usr/lib/systemd/user/graphical-session.target.wants/displaylink-connect.service
