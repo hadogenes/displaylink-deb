@@ -6,6 +6,3 @@ Type=oneshot
 RemainAfterExit=yes
 ExecStart=/opt/displaylink/displaylink_connect.sh
 SuccessExitStatus=10
-
-[Install]
-WantedBy=graphical-session.target

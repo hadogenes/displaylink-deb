@@ -1,0 +1,10 @@
+[Desktop Entry]
+Type=Application
+Name=Start displaylink-connect service
+Autostart-Condition=
+Exec=sh -c "test -f /run/displaylink.pid && systemctl --user --no-block start displaylink-connect.service"
+StartupNotify=false
+NoDisplay=true
+
+X-GNOME-Autostart-Phase=Initialization
+X-KDE-autostart-phase=1
