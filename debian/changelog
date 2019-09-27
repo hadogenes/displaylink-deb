@@ -1,10 +1,16 @@
-displaylink (5.1.26-5) UNRELEASED; urgency=medium
+displaylink (5.1.26-6) UNRELEASED; urgency=medium
+
+  * Udev rules are installed in /lib/udev 
+
+ -- Jacek Szafarkiewicz <szafar@linux.pl>  Fri, 27 Sep 2019 21:22:55 +0200
+
+displaylink (5.1.26-5) unstable; urgency=medium
 
   * Add condition to systemd user service 
   * Correct files modprobe and modules-load 
   * main displaylink service don't wait for user services 
 
- -- Jacek Szafarkiewicz <szafar@linux.pl>  Thu, 01 Aug 2019 14:06:22 +0200
+ -- Jacek Szafarkiewicz <szafar@linux.pl>  Fri, 27 Sep 2019 21:22:50 +0200
 
 displaylink (5.1.26-4) unstable; urgency=medium
 
