@@ -1,8 +1,8 @@
-displaylink (5.1.26-6) UNRELEASED; urgency=medium
+displaylink (5.1.26-6) unstable; urgency=medium
 
   * Udev rules are installed in /lib/udev 
 
- -- Jacek Szafarkiewicz <szafar@linux.pl>  Fri, 27 Sep 2019 21:22:55 +0200
+ -- Jacek Szafarkiewicz <szafar@linux.pl>  Fri, 27 Sep 2019 21:25:20 +0200
 
 displaylink (5.1.26-5) unstable; urgency=medium
 
