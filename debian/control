@@ -11,7 +11,7 @@ Package: displaylink
 Architecture: i386 amd64
 Section: non-free/x11
 Depends: ${shlibs:Depends}, ${misc:Depends},
- libevdi0 (>= 1.6.0), libevdi0 (<< 1.7.0),
+ libevdi0-dev (>= 1.6.0), libevdi0-dev (<< 1.7.0),
  evdi-dkms (>= 1.6.0), evdi-dkms (<<1.7.0),
  udev,
  libusb-1.0-0,
