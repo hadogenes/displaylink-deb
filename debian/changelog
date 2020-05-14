@@ -1,3 +1,9 @@
+displaylink (5.3.1-1) UNRELEASED; urgency=medium
+
+  * New upstream version
+
+ -- Jacek Szafarkiewicz <szafar@linux.pl>  Thu, 14 May 2020 10:44:13 +0200
+
 displaylink (5.2.14-1) unstable; urgency=medium
 
   * New upstream version 

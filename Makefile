@@ -1,6 +1,6 @@
 VERSION=$(shell dpkg-parsechangelog | sed -nr '/^Version:/s/Version: (.*)-(.*)/\1/p')
 RELEASE=$(shell dpkg-parsechangelog | sed -nr '/^Version:/s/Version: (.*)-(.*)/\2/p')
-DOWNLOAD_ID=1369 # This id number comes off the link on the displaylink website
+DOWNLOAD_ID=1576 # This id number comes off the link on the displaylink website
 
 TARGETS = displaylink_$(VERSION)-$(RELEASE)_amd64.deb
 
